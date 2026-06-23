@@ -15,6 +15,15 @@ body {
 }
 
 /* ==========================================================================
+   GLOBAL SVG SUB-PIXEL RENDERING PATCH
+   ========================================================================== */
+img[src$=".svg"] {
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Forces GPU rendering to eliminate flickering lines */
+  shape-rendering: geometricPrecision;
+}
+
+/* ==========================================================================
    NAVBAR CONTAINER ELEMENT
    ========================================================================== */
 .navbar-container {
@@ -164,7 +173,7 @@ body {
 
 .hero-img {
   width: 100%;
-  max-width: 391px; /* Restricts the SVG from ballooning out too large */
+  max-width: 391px;
   height: auto;
   display: block;
 }
