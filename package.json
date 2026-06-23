@@ -1,6 +1,7 @@
 {
   "name": "nexcent-landing",
   "private": true,
+  "type": "module",
   "version": "0.0.0",
   "homepage": "https://kiet252.github.io/Nexcent-landing-page",
   "scripts": {

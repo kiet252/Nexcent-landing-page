@@ -1,4 +1,4 @@
-import logoAsset from './assets/NexcentLogo.svg'
+import logoAsset from '../assets/NexcentLogo.svg'
 
 export default function Navbar() {
     //const navLinks = ['Home', 'Feature', 'Community', 'Blog', 'Pricing']
