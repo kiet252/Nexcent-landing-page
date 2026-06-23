@@ -5,8 +5,9 @@ import HomeSection from './components/home-section/HomeSection'
 function App() {
   return (
     <div className="app-wrapper">
-      <Navbar></Navbar>
 
+      <Navbar></Navbar>
+      
       <HomeSection></HomeSection>
     </div>
   )

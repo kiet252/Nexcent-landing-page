@@ -279,3 +279,95 @@ img[src$=".svg"] {
 .client-logo-img:hover {
   opacity: 1; /* Crisp look when user hovers mouse across individual logos */
 }
+
+/* ==========================================================================
+   COMMUNITY SECTIONS AND CARD LAYOUTS
+   ========================================================================== */
+
+.community-container {
+  background-color: #FFFFFF;
+  padding: 48px 144px;
+  text-align: center;
+}
+
+.community-container h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4D4D4D;
+  max-width: 600px; /* Restricts title width so it breaks into a nice 2-line balance */
+  margin: 0 auto 8px auto; /* Centers the block itself */
+}
+
+.community-container p {
+  font-size: 16px;
+  color: #717171;
+  margin-bottom: 40px;
+}
+
+/* 1. Flex container to distribute cards horizontally */
+.community-display-container {
+  display: flex;
+  justify-content: space-between; /* Evenly columns across the wrapper space */
+  align-items: stretch; /* Keeps card heights uniform regardless of text length */
+  gap: 32px; /* Generous breathing room between columns */
+  flex-wrap: wrap;
+}
+
+/* 2. Individual layout configuration for each membership card */
+.community-card {
+  background-color: #FFFFFF;
+  flex: 1; /* Makes cards grow and shrink evenly */
+  min-width: 250px; /* Prevents text compression on smaller displays */
+  padding: 24px 32px;
+  border-radius: 8px;
+  
+  /* High-quality micro drop shadow configuration for UI depth */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06); 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally aligns everything inside the card to the center */
+  text-align: center;
+}
+
+/* 3. Icon placement spacing */
+.icon-badge {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #E8F5E9; /* That soft green tint */
+  border-radius: 8px;        /* Soft rounded corners */
+  margin-bottom: 24px;       /* Spacing between badge and text title */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. The icon itself, shifted away from the background's center */
+.img-chunk {
+  width: 32px;  /* Adjust size to match Figma icon scale */
+  height: 32px;
+  object-fit: contain;
+  
+  /* The Magic Trick: absolute position it and nudge it away from the center */
+  position: absolute;
+  top: -4px;   /* Pulls the icon slightly upward */
+  left: -4px;  /* Pulls the icon slightly to the left */
+}
+
+/* 4. Inside Card Headings */
+.community-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4D4D4D;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+/* 5. Inside Card Description Copy */
+.community-card p {
+  font-size: 14px;
+  color: #717171;
+  line-height: 1.4;
+  margin-bottom: 0; /* Clear out default margins */
+}
