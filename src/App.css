@@ -178,15 +178,28 @@ body {
   position: relative; 
 }
 
-/* 2. Position the dot container at the bottom center of the hero section */
 .hero-dots {
   position: absolute;
-  bottom: 32px; /* Pulls them up from the very bottom edge */
+  bottom: 32px;
   left: 50%;
-  transform: translateX(-50%); /* Centers the row perfectly horizontally */
+  transform: translateX(-50%);
   display: flex;
-  gap: 8px; /* Standard tidy spacing between dots */
+  gap: 8px;
   z-index: 10;
+  
+  /* 🌟 Add these lines to fix the weird vertical boundary line */
+  width: max-content;  /* Restricts the box strictly to the width of the 3 dots */
+  height: auto;        /* Prevents the container height from stretching upward */
+}
+
+/* Ensure the dots don't throw an ugly box outline on click */
+.dot:focus-visible {
+  outline: 2px solid #4CAF4F; /* Adds a nice, clean green ring ONLY for keyboard users */
+  outline-offset: 2px;
+}
+
+.dot:focus {
+  outline: none; /* Removes the ugly default browser box for regular mouse clicks */
 }
 
 /* 3. Base style for each interactive dot button */
