@@ -1,10 +1,10 @@
 import './App.css'
+import Navbar from './Navbar'
 
 function App() {
   return (
     <div className="app-wrapper">
-      {/* Your new Nexcent components will go here! */}
-      <h1>Nexcent Project Workspace</h1>
+      <Navbar></Navbar>
     </div>
   )
 }
