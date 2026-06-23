@@ -168,3 +168,47 @@ body {
   height: auto;
   display: block;
 }
+
+/* ==========================================================================
+   HERO CAROUSEL DOTS POSITIONING
+   ========================================================================== */
+
+/* 1. We add relative positioning to your container so the dots anchor to it */
+.hero-container {
+  position: relative; 
+}
+
+/* 2. Position the dot container at the bottom center of the hero section */
+.hero-dots {
+  position: absolute;
+  bottom: 32px; /* Pulls them up from the very bottom edge */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the row perfectly horizontally */
+  display: flex;
+  gap: 8px; /* Standard tidy spacing between dots */
+  z-index: 10;
+}
+
+/* 3. Base style for each interactive dot button */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4CAF4F; /* Corporate brand green */
+  opacity: 0.3; /* Light green tint for inactive slides */
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 4. Active state modifier class */
+.dot.active {
+  opacity: 1; /* Full solid green clarity when active */
+  transform: scale(1.15); /* Gives it a slight physical presence bump */
+}
+
+/* 5. Subtle hover state feedback for desktop users */
+.dot:hover {
+  opacity: 0.7;
+}
