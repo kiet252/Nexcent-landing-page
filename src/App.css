@@ -196,7 +196,6 @@ img[src$=".svg"] {
   gap: 8px;
   z-index: 10;
   
-  /* 🌟 Add these lines to fix the weird vertical boundary line */
   width: max-content;  /* Restricts the box strictly to the width of the 3 dots */
   height: auto;        /* Prevents the container height from stretching upward */
 }
@@ -233,4 +232,50 @@ img[src$=".svg"] {
 /* 5. Subtle hover state feedback for desktop users */
 .dot:hover {
   opacity: 0.7;
+}
+
+/* ==========================================================================
+   CLIENT MARQUEE BANNER
+   ========================================================================== */
+
+.client-container {
+  background-color: #FFFFFF; /* Shifts cleanly back to white below the gray hero background */
+  padding: 40px 144px; /* Matches the consistent side-alignment grids */
+  text-align: center; /* Centers both heading strings perfectly */
+}
+
+.client-container h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4D4D4D;
+  margin-bottom: 8px;
+}
+
+.client-container p {
+  font-size: 16px;
+  color: #717171;
+  margin-bottom: 32px; /* Generous separation before the graphic list */
+}
+
+/* Flex row setup to evenly space corporate logo markers */
+.client-display-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Spaces them out perfectly from edge to edge */
+  align-items: center;
+  flex-wrap: wrap; /* Gracefully wraps logos down on smaller tablet screens */
+  gap: 24px;
+}
+
+/* Tidy sizing constraint for individual client images */
+.client-logo-img {
+  height: 48px; /* Fixed uniform height constraints so everything looks proportional */
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8; /* Subtle corporate blend effect */
+  transition: opacity 0.2s ease;
+}
+
+.client-logo-img:hover {
+  opacity: 1; /* Crisp look when user hovers mouse across individual logos */
 }
