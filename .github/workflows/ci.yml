@@ -1,0 +1,36 @@
+name: React CI Workflow
+
+# Trigger this workflow on every push or pull request to the main branch
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify-project:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Pull down the code from your repository
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    # 2. Set up Node.js environment
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-node: '20' # Uses a stable Node version
+        cache: 'npm'    # Caches npm dependencies for faster runs
+
+    # 3. Install project packages
+    - name: Install dependencies
+      run: npm ci # A cleaner version of 'npm install' meant specifically for automated servers
+
+    # 4. Check for TypeScript and linting rules
+    - name: Check code formatting & syntax
+      run: npm run lint
+
+    # 5. Compile the app to ensure no build errors
+    - name: Compile production build
+      run: npm run build
