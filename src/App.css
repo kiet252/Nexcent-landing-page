@@ -515,3 +515,252 @@ img[src$=".svg"] {
   color: #717171;
   margin: 0;
 }
+
+/* ==========================================================================
+    SECOND UNLOCK SECTION
+   ========================================================================== */
+
+.second-unlock-container {
+  background-color: #FFFFFF;
+  padding: 48px 144px;
+  display: flex;
+  align-items: center;        /* Vertically centers the text column with the illustration */
+  justify-content: space-between; /* Pushes the left and right columns to the edges */
+  gap: 64px;                  /* Adds explicit breathing room between image and text */
+}
+
+.second-unlock-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.seocond-unlock-left img {
+  width: 100%;
+  max-width: 440px;           /* Adjust this value to match your Figma design file scale */
+  height: auto;
+}
+
+.second-unlock-right {
+  flex: 1.2;                  /* Gives the text side slightly more layout room than the graphic */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    /* Ensures everything aligns cleanly to the left */
+}
+
+.second-unlock-container h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4D4D4D;
+  line-height: 1.3;
+  margin: 0 0 16px 0;        
+}
+
+.second-unlock-container p {
+  font-size: 14px;            /* Slightly downscaled for body text density matching image_607de0.png */
+  color: #717171;
+  line-height: 1.6;
+  margin: 0 0 32px 0;         /* Clear bottom margins before the CTA button */
+}
+
+.second-unlock-container button {
+  background-color: #4CAF4F;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.second-unlock-container button:hover {
+  background-color: #388E3C;
+}
+
+/* ==========================================================================
+   CUSTOMER TESTIMONIAL SECTION
+   ========================================================================== */
+
+.customer-container {
+  background-color: #F5F7FA; /* Light section background */
+  padding: 64px 144px;
+  display: flex;
+  align-items: center;       /* Centers the left image vertically with the right block */
+  gap: 64px;
+}
+
+/* Left image sizing control */
+.customer-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.customer-left img {
+  width: 100%;
+  max-width: 320px;         /* Keeps the card layout graphic proportional */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Right content box */
+.customer-right {
+  flex: 2;                  /* Gives text more structural layout footprint */
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #717171;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.customer-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4CAF4F;           /* Bright green color matching image_7acc85.png */
+  margin: 0 0 8px 0;
+}
+
+.customer-title {
+  font-size: 14px;
+  color: #8993A4;
+  margin-bottom: 32px;
+}
+
+/* --- Bottom Row Logo Bar & Link Configuration --- */
+.customers-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;          /* Graceful wrapping for small laptop viewports */
+  gap: 24px;                /* Consistent layout gap across logos */
+}
+
+.customer-brand-logo {
+  height: 32px;             /* Keeps the client badges balanced and compact */
+  width: auto;
+  object-fit: contain;
+}
+
+/* The Call to Action link styling */
+.meet-customers-link {
+  color: #4CAF4F;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: auto;        /* 🌟 Pushes the link perfectly to the right side of the row */
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.meet-customers-link:hover {
+  color: #388E3C;
+}
+
+/* Responsive adjustment if the row wraps on small screens */
+@media (max-width: 992px) {
+  .meet-customers-link {
+    margin-left: 0;         /* Drops into fluid order if screens get too tight */
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+/* ==========================================================================
+   COMMUNITY UPDATES (BLOG CARDS OVERLAP)
+   ========================================================================== */
+
+.community-update-container {
+  background-color: #FFFFFF;
+  padding: 64px 144px 120px 144px; /* Generous bottom padding to account for the hanging cards */
+  text-align: center;
+}
+
+.community-update-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4D4D4D;
+  margin-bottom: 12px;
+}
+
+.community-update-description {
+  font-size: 14px;
+  color: #717171;
+  max-width: 620px;
+  margin: 0 auto 48px auto; /* Centers paragraph layout block */
+  line-height: 1.6;
+}
+
+/* Flex row framework to stack columns evenly */
+.community-update-card-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Individual card module configuration */
+.community-update-card {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers the floating card over the graphic */
+}
+
+/* Base image styling */
+.card-image {
+  width: 100%;
+  height: 240px; /* Uniform height constraints for a neat structural row grid */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* The Floating Card: Pulled up over the image via negative margins */
+.card-description {
+  background-color: #F5F7FA; /* Off-white tint container background matching image_7b52ca.png */
+  width: 85%;                /* Insets the card margins safely away from the outer border lines */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06); /* Drop shadow depth configuration */
+  
+  margin-top: -64px;         /* Negative margin pulls the text box up over the image frame */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card-description p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #717171;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+  
+  /* Restricts heights to a clean max line limit profile */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* CTA Link Elements */
+.card-description a {
+  color: #4CAF4F;            /* Brand highlight green color */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.card-description a:hover {
+  color: #388E3C;
+}
