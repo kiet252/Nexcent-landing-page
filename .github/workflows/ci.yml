@@ -20,7 +20,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-node: '20' # Uses a stable Node version
+        node-version: '20' # Uses a stable Node version
         cache: 'npm'    # Caches npm dependencies for faster runs
 
     # 3. Install project packages

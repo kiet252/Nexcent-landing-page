@@ -371,3 +371,147 @@ img[src$=".svg"] {
   line-height: 1.4;
   margin-bottom: 0; /* Clear out default margins */
 }
+
+/* ==========================================================================
+   BODY SECTION
+   ========================================================================== */
+
+/* ==========================================================================
+    UNLOCK SECTION
+   ========================================================================== */
+
+.unlock-container {
+  background-color: #FFFFFF;
+  padding: 48px 144px;
+  display: flex;
+  align-items: center;        /* Vertically centers the text column with the illustration */
+  justify-content: space-between; /* Pushes the left and right columns to the edges */
+  gap: 64px;                  /* Adds explicit breathing room between image and text */
+}
+
+.left-unlock {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.left-unlock img {
+  width: 100%;
+  max-width: 440px;           /* Adjust this value to match your Figma design file scale */
+  height: auto;
+}
+
+.right-container {
+  flex: 1.2;                  /* Gives the text side slightly more layout room than the graphic */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    /* Ensures everything aligns cleanly to the left */
+}
+
+.unlock-container h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4D4D4D;
+  line-height: 1.3;
+  margin: 0 0 16px 0;        
+}
+
+.unlock-container p {
+  font-size: 14px;            /* Slightly downscaled for body text density matching image_607de0.png */
+  color: #717171;
+  line-height: 1.6;
+  margin: 0 0 32px 0;         /* Clear bottom margins before the CTA button */
+}
+
+.unlock-container button {
+  background-color: #4CAF4F;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.unlock-container button:hover {
+  background-color: #388E3C;
+}
+
+/* ==========================================================================
+   ACHIEVEMENTS METRIC ROW
+   ========================================================================== */
+
+.achievement-container {
+  background-color: #F5F7FA; /* Light grey section tint behind metrics row */
+  padding: 64px 144px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+/* --- Left Column Typographic Column --- */
+.left-achievement {
+  flex: 1;
+}
+
+.left-achievement h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4D4D4D;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+/* Brand Green Accent Line matching image_6157f9.png style specifications */
+.text-accent {
+  color: #4CAF4F;
+  display: inline-block;
+}
+
+.left-achievement p {
+  font-size: 16px;
+  color: #18191F;
+}
+
+/* --- Right Column 2x2 Metric Matrix Grid --- */
+.right-achievement {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Generates a perfect 2-column wide layout grid */
+  gap: 40px 24px; /* Generous row gaps and column spacing */
+}
+
+/* Individual Metric Element Card */
+.achievement-card {
+  display: flex;
+  align-items: center; /* Vertically centers the icon vector alongside the text block */
+  gap: 16px;           /* Spatial buffer between vector image and data figures */
+}
+
+.achievement-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.achievement-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-data h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4D4D4D;
+  line-height: 1;
+  margin: 0 0 4px 0;   /* Keeps figures snug tightly above labels */
+}
+
+.achievement-data p {
+  font-size: 16px;
+  color: #717171;
+  margin: 0;
+}
