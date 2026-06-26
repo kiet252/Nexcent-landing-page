@@ -764,3 +764,169 @@ img[src$=".svg"] {
 .card-description a:hover {
   color: #388E3C;
 }
+
+/* ==========================================================================
+   FOOTER ABOVE CONTAINER ELEMENT
+   ========================================================================== */
+.footer-above-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F7FA;
+  padding: 60px 0px;
+  gap: 20px;
+}
+
+.footer-above-container h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 76px;
+  color: #263238;
+  margin-bottom: 16px;
+
+  max-width: 650px;       /* Restricts the width so the text breaks perfectly */
+  text-align: center;
+}
+
+.footer-above-container button {
+  background-color: #4CAF4F;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.footer-above-container button:hover {
+  background-color: #388E3C;
+}
+
+/* ==========================================================================
+   FOOTER BELOW CONTAINER (MAIN WRAPPER)
+   ========================================================================== */
+.footer-below-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #263238; /* Dark slate background color */
+  padding: 80px 160px;       /* Generous padding for horizontal layout */
+  color: #FFFFFF;
+  font-family: sans-serif;   /* Replace with your project's global font */
+}
+
+/* Common link & heading styling across columns */
+.footer-below-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 24px 0;       /* Bottom margin to push links down */
+}
+
+.footer-below-container a {
+  color: #F5F7FA;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-below-container a:hover {
+  color: #4CAF4F;            /* Subtle green brand color hover effect */
+}
+
+/* ==========================================================================
+   COLUMN 1: SOCIAL DESCRIPTION CONTAINER
+   ========================================================================== */
+.social-description-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+
+.nexcent-logo {
+  width: auto;
+  height: 30px;              /* Adjust height to fit design scale */
+  margin-bottom: 40px;
+}
+
+.copyright, 
+.all-rights-reserved {
+  font-size: 14px;
+  color: #F5F7FA;
+  line-height: 22px;
+}
+
+.all-rights-reserved {
+  margin-bottom: 30px;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 16px;                 /* Clean spacing between the circular icons */
+}
+
+.social-media-links a img {
+  width: 32px;               /* Fits the icon assets properly */
+  height: 32px;
+}
+
+/* ==========================================================================
+   COLUMNS 2 & 3: LINKS (COMPANY & SUPPORT)
+   ========================================================================== */
+.company-link-container,
+.support-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                 /* Vertical spacing between the links */
+}
+
+/* ==========================================================================
+   COLUMN 4: STAY UP TO DATE & EMAIL INPUT
+   ========================================================================== */
+.stay-up-to-date-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 255px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #515D64; /* Tinted lighter background for input field */
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+}
+
+.email-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.email-input::placeholder {
+  color: #D9DBE1;           /* Light gray text matching image_c76586.png */
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 8px;
+}
+
+.icon-button img {
+  width: 18px;               /* Sizing for your FooterSendIcon */
+  height: 18px;
+}
+
